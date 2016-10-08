@@ -28,19 +28,23 @@ class test_add_new_contact(unittest.TestCase):
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
         #open new contact page
         wd.find_element_by_link_text("add new").click()
-        #fill new contact
+        #fill first name
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("basia")
+        #fill last name
         wd.find_element_by_name("lastname").click()
         wd.find_element_by_name("lastname").clear()
         wd.find_element_by_name("lastname").send_keys("kowalska")
+        #fill address
         wd.find_element_by_name("address").click()
         wd.find_element_by_name("address").clear()
         wd.find_element_by_name("address").send_keys("adres")
+        #fill phone number
         wd.find_element_by_name("home").click()
         wd.find_element_by_name("home").clear()
         wd.find_element_by_name("home").send_keys("12345")
+        #fill email
         wd.find_element_by_name("email").click()
         wd.find_element_by_name("email").clear()
         wd.find_element_by_name("email").send_keys("basia@kowalska.pl")
