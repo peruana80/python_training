@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.firefox.webdriver import WebDriver
 import unittest
-from contact1 import Contact
+from contact import Contact
 
 
 def is_alert_present(wd):
@@ -11,12 +11,12 @@ def is_alert_present(wd):
     except:
         return False
 
-class add_new_contact1(unittest.TestCase):
+class test_add_new_contact(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
     
-    def test_add_new_contact1(self):
+    def test_add_new_contact(self):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
@@ -26,7 +26,7 @@ class add_new_contact1(unittest.TestCase):
                               email3="email3", homepage="strona domowa", byear="1990", ayear="2000", address_2="drugi adres", phone2="dom", notes="notatki"))
         self.logout(wd)
 
-    def test_add_new_empty_contact1(self):
+    def test_add_new_empty_contact(self):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
