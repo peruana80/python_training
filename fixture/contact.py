@@ -4,9 +4,15 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
-    def fill_new(self, contact):
+    def add_new_contact(self, contact):
         wd = self.app.wd
         self.open_new_contact(wd)
+        self.fill_contact_form(contact)
+        # submit contact creation
+        wd.find_element_by_name("submit").click()
+
+    def fill_contact_form(self, contact):
+        wd = self.app.wd
         # fill first name
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -95,9 +101,16 @@ class ContactHelper:
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.notes)
-        # submit contact creation
-        wd.find_element_by_name("submit").click()
 
     def open_new_contact(self, wd):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("//*[@id='content']/form[2]/div[2]/input").click()
+        # accept popup window
+        wd.switch_to_alert().accept()

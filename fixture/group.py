@@ -10,7 +10,9 @@ class GroupHelper:
         wd.find_element_by_link_text("group page").click()
 
     def delete_first_group(self):
+        #open group page
         wd = self.app.wd
+        wd.find_element_by_xpath("//*[@id='nav']/ul/li[3]/a").click()
         #select first group
         wd.find_element_by_name("selected[]").click()
         #submit deletion
