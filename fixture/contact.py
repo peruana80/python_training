@@ -4,12 +4,29 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
-    def add_new_contact(self, contact):
+
+    def delete_first_contact(self):
         wd = self.app.wd
-        self.open_new_contact(wd)
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("//*[@id='content']/form[2]/div[2]/input").click()
+        # accept popup window
+        wd.switch_to_alert().accept()
+
+
+    def modify_first_contact(self, contact):
+        # open contact page
+        wd = self.app.wd
+        #select first contact
+        wd.find_element_by_name("selected[]").click()
+        #edit contact
+        wd.find_element_by_xpath("/.//*[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        #fill contact form
         self.fill_contact_form(contact)
-        # submit contact creation
-        wd.find_element_by_name("submit").click()
+        #update form
+        wd.find_element_by_name("update").click()
+
 
     def fill_contact_form(self, contact):
         wd = self.app.wd
@@ -106,11 +123,12 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-    def delete_first_contact(self):
+    def add_new_contact(self, contact):
         wd = self.app.wd
-        # select first contact
-        wd.find_element_by_name("selected[]").click()
-        # submit deletion
-        wd.find_element_by_xpath("//*[@id='content']/form[2]/div[2]/input").click()
-        # accept popup window
-        wd.switch_to_alert().accept()
+        self.open_new_contact(wd)
+        self.fill_contact_form(contact)
+        # submit contact creation
+        wd.find_element_by_name("submit").click()
+
+
+
