@@ -21,7 +21,7 @@ class GroupHelper:
         self.return_to_groups_page()
 
 
-    def modify_first_group(self, group):
+    def modify_first_group(self, new_group_data):
         # open group page
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
@@ -30,7 +30,7 @@ class GroupHelper:
         #edit group
         wd.find_element_by_name("edit").click()
         #modify form
-        self.fill_group_form(group)
+        self.fill_group_form(new_group_data)
         #update form
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
@@ -49,13 +49,14 @@ class GroupHelper:
 
     def fill_group_form(self, group):
         wd = self.app.wd
-        # fill group form with values
-        wd.find_element_by_name("group_name").click()
-        wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys(group.name)
-        wd.find_element_by_name("group_header").click()
-        wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys(group.header)
-        wd.find_element_by_name("group_footer").click()
-        wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys(group.footer)
+        self.change_filed_value("group_name", group.name)
+        self.change_filed_value("group_header", group.header)
+        self.change_filed_value("group_footer", group.footer)
+
+
+    def change_filed_value(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
