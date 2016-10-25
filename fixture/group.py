@@ -11,15 +11,18 @@ class GroupHelper:
 
 
     def delete_first_group(self):
-        #open group page
         wd = self.app.wd
-        wd.find_element_by_xpath("//*[@id='nav']/ul/li[3]/a").click()
+        self.open_group_page()
         #select first group
         wd.find_element_by_name("selected[]").click()
         #submit deletion
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
 
+    def open_group_page(self):
+        # open group page
+        wd = self.app.wd
+        wd.find_element_by_xpath("//*[@id='nav']/ul/li[3]/a").click()
 
     def modify_first_group(self, new_group_data):
         # open group page
