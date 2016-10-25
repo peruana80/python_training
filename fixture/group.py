@@ -20,9 +20,9 @@ class GroupHelper:
         self.return_to_groups_page()
 
     def open_group_page(self):
-        # open group page
         wd = self.app.wd
-        wd.find_element_by_xpath("//*[@id='nav']/ul/li[3]/a").click()
+        if not(wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new")) > 0):
+            wd.find_element_by_xpath("//*[@id='nav']/ul/li[3]/a").click()
 
     def modify_first_group(self, new_group_data):
         wd = self.app.wd
