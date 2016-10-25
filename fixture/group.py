@@ -25,9 +25,8 @@ class GroupHelper:
         wd.find_element_by_xpath("//*[@id='nav']/ul/li[3]/a").click()
 
     def modify_first_group(self, new_group_data):
-        # open group page
         wd = self.app.wd
-        wd.find_element_by_link_text("groups").click()
+        self.open_group_page()
         # select first group
         wd.find_element_by_name("selected[]").click()
         #edit group
@@ -42,7 +41,7 @@ class GroupHelper:
     def create(self, group):
         wd = self.app.wd
         # open groups page
-        wd.find_element_by_link_text("groups").click()
+        self.open_group_page()
         # create group
         wd.find_element_by_name("new").click()
         self.fill_group_form(group)
