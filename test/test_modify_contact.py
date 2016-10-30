@@ -16,7 +16,7 @@ def test_modify_first_contact_first_name(app):
     app.contact.modify_first_contact(Contact(first_name="Zmodyfikuj imie"))
 
 
-def test_modify_first_contact_address(app):
+def test_modify_first_contact_last_name(app):
     if app.group.count() == 0:
         app.contact.create(Contact(first_name="test"))
-    app.contact.modify_first_contact(Contact(address="Zmodyfikuj adres"))
+    app.contact.modify_first_contact(Contact(last_name="Zmodyfikuj nazwisko"))
