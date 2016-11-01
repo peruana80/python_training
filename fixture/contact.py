@@ -31,13 +31,13 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
+    def modify_first_contact(self):
+        self.modify_contact_by_index(0)
 
-    def modify_first_contact(self, new_contact_data):
-        # open contact page
+    def modify_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.open_main_page()
-        #select first contact
-        wd.find_element_by_name("selected[]").click()
+        self.select_contact_by_index(index)
         #edit contact
         wd.find_element_by_xpath("/.//*[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
         #fill contact form

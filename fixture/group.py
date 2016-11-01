@@ -17,7 +17,6 @@ class GroupHelper:
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
 
-
     def select_group_by_index(self, index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
@@ -35,16 +34,20 @@ class GroupHelper:
         self.return_to_groups_page()
         self.group_cache = None
 
+
     def open_group_page(self):
         wd = self.app.wd
         if not(wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new")) > 0):
             wd.find_element_by_xpath("//*[@id='nav']/ul/li[3]/a").click()
 
-    def modify_first_group(self, new_group_data):
+
+    def modify_first_group(self):
+        self.modify_group_by_index(0)
+
+    def modify_group_by_index(self, index, new_group_data):
         wd = self.app.wd
         self.open_group_page()
-        # select first group
-        wd.find_element_by_name("selected[]").click()
+        self.select_group_by_index(index)
         #edit group
         wd.find_element_by_name("edit").click()
         #modify form
@@ -53,6 +56,7 @@ class GroupHelper:
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
         self.group_cache = None
+
 
     def create(self, group):
         wd = self.app.wd
@@ -65,6 +69,7 @@ class GroupHelper:
         wd.find_element_by_name("submit").click()
         self.return_to_groups_page()
         self.group_cache = None
+
 
     def fill_group_form(self, group):
         wd = self.app.wd
@@ -88,8 +93,6 @@ class GroupHelper:
 
 
     group_cache = None
-
-
     def get_group_list(self):
         if self.group_cache is None:
             wd = self.app.wd
