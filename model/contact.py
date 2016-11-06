@@ -31,7 +31,10 @@ class Contact:
 
 
     def __repr__(self):
-        return "%s:%s" % (self.id, self.first_name)
+        return "%s:%s;%s;%s;%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s" % (self.id, self.first_name, self.middle_name, self.last_name, self.nickname, self.title, self.company,
+                                                                         self.address, self.home_number, self.mobile_number, self.work_number, self.fax, self.email, self.email2, self.email3,
+                                                                         self.homepage, self.byear, self.ayear, self.address_2, self.phone2, self.notes, self.all_phones_from_home_page,
+                                                                         self.all_emails_from_home_page, self.id)
 
 
     def __eq__(self, other):
