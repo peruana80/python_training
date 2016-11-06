@@ -67,12 +67,17 @@ class ContactHelper:
         self.open_contact_to_edit_by_index(index)
         first_name = wd.find_element_by_name("firstname").get_attribute("value")
         last_name = wd.find_element_by_name("lastname").get_attribute("value")
+        address = wd.find_element_by_name("address").get_attribute("value")
+        email = wd.find_element_by_name("email").get_attribute("value")
+        email2 = wd.find_element_by_name("email2").get_attribute("value")
+        email3 = wd.find_element_by_name("email3").get_attribute("value")
         id = wd.find_element_by_name("id").get_attribute("value")
         home_number = wd.find_element_by_name("home").get_attribute("value")
         mobile_number = wd.find_element_by_name("mobile").get_attribute("value")
         work_number = wd.find_element_by_name("work").get_attribute("value")
         phone2 = wd.find_element_by_name("phone2").get_attribute("value")
-        return Contact(first_name=first_name, last_name=last_name, id=id,
+        return Contact(first_name=first_name, last_name=last_name, id=id, address= address,
+                       email=email, email2=email2, email3= email3,
                        home_number=home_number, mobile_number=mobile_number, work_number=work_number, phone2=phone2)
 
     contact_cache = None
@@ -87,8 +92,10 @@ class ContactHelper:
                 text1 = cells[1].text
                 text2 = cells[2].text
                 id = element.find_element_by_name("selected[]").get_attribute("value")
+                address = cells[3].text
+                all_emails = cells[4].text
                 all_phones = cells[5].text
-                self.contact_cache.append(Contact(first_name=text2, last_name=text1, id=id, all_phones_from_home_page = all_phones))
+                self.contact_cache.append(Contact(first_name=text2, last_name=text1, id=id, address=address, all_emails_from_home_page=all_emails, all_phones_from_home_page=all_phones))
         return list(self.contact_cache)
 
 

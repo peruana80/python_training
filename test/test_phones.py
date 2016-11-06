@@ -22,5 +22,6 @@ def clear(s):
 
 def merge_phones_like_on_home_page(contact):
     return "\n".join(filter(lambda x: x != "",
-                            map(lambda x: clear(x), filter(lambda x: x is not None,
-                                                           [contact.home_number, contact.mobile_number, contact.work_number, contact.phone2]))))
+                            map(lambda x: clear(x),
+                                filter(lambda x: x is not None,
+                                       [contact.home_number, contact.mobile_number, contact.work_number, contact.phone2]))))
