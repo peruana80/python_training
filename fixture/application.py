@@ -4,8 +4,6 @@ from fixture.group import GroupHelper
 from fixture.contact import ContactHelper
 #import os
 
-#chromedriver = "C:\Users\kala\Documents\GitHub\python_training\chromedriver_win32\chromedriver.exe"
-#os.environ["webdriver.chrome.driver"] = chromedriver
 
 
 class Application:

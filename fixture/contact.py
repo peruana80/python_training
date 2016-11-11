@@ -167,12 +167,12 @@ class ContactHelper:
 
     def open_main_page(self):
         wd = self.app.wd
-        if not (wd.current_url == "http://localhost/addressbook/"):
+        if not (wd.current_url == self.app.base_url):
             wd.find_element_by_xpath("//*[@id='nav']/ul/li[1]/a").click()
 
     def open_new_contact(self):
         wd = self.app.wd
-        if not (wd.current_url.endswith("http://localhost/addressbook/edit.php") and len(wd.find_elements_by_name("Enter")) > 0):
+        if not (wd.current_url.endswith(self.app.base_url) and len(wd.find_elements_by_name("Enter")) > 0):
             wd.find_element_by_link_text("add new").click()
 
 
