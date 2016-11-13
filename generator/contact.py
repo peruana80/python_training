@@ -37,7 +37,7 @@ testdata = [Contact(first_name="", middle_name="", last_name="", nickname="", ti
                 mobile_number=random_string("mobile_number",10), work_number=random_string("work_number",10), fax=random_string("fax",10), email=random_string("email",10),
                 email2=random_string("email2",10), email3=random_string("email3",10), homepage=random_string("homepage",10), byear=random_string("byear",10), ayear=random_string("ayear",10),
                 address_2=random_string("address_2",10), phone2=random_string("phone2",10), notes=random_string("notes",10))
-        for i in range(5)
+        for i in range(n)
 ]
 
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f)

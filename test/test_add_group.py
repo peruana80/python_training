@@ -2,7 +2,7 @@
 
 from model.group import Group
 import pytest
-from data.add_group import constant as testdata
+from data.add_group import testdata
 
 
 

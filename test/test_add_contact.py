@@ -2,7 +2,8 @@
 
 from model.contact import Contact
 import pytest
-from generator.contact import testdata
+#from generator.contact import testdata
+from data.add_group import testdata
 
 
 @pytest.mark.parametrize("contact", testdata, ids=[str(x) for x in testdata])
