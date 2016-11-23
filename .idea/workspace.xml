@@ -33,8 +33,8 @@
       <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="29" column="112" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="112" />
+            <state relative-caret-position="629">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -42,11 +42,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_db_matches_ui.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_db_matches_ui.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_db_matches_ui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+            <state relative-caret-position="119">
+              <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_add_group.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -99,14 +111,14 @@
         <option value="$PROJECT_DIR$/data/add_group.py" />
         <option value="$PROJECT_DIR$/data/add_contact.py" />
         <option value="$PROJECT_DIR$/data/groups.py" />
-        <option value="$PROJECT_DIR$/test/test_add_group.py" />
         <option value="$PROJECT_DIR$/test/test_add_contact.py" />
         <option value="$PROJECT_DIR$/generator/group.py" />
         <option value="$PROJECT_DIR$/generator/contact.py" />
         <option value="$PROJECT_DIR$/target.json" />
         <option value="$PROJECT_DIR$/conftest.py" />
-        <option value="$PROJECT_DIR$/test/test_db_matches_ui.py" />
         <option value="$PROJECT_DIR$/check_db_connection.py" />
+        <option value="$PROJECT_DIR$/test/test_db_matches_ui.py" />
+        <option value="$PROJECT_DIR$/test/test_add_group.py" />
         <option value="$PROJECT_DIR$/fixture/db.py" />
       </list>
     </option>
@@ -251,7 +263,7 @@
       <recent name="C:\Users\kala\Documents\GitHub\python_training" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test_db_matches_ui.py">
+  <component name="RunManager" selected="Python tests.py.test in test_add_group.py (1)">
     <configuration default="false" name="py.test in test_add_group.py (1)" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -608,9 +620,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_db_matches_ui.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_del_group.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_add_group.py (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_add_group.py (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_db_matches_ui.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_del_group.py" />
         <item index="3" class="java.lang.String" itemvalue="Python.check_db_connection" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_add_contact.py" />
       </list>
@@ -630,17 +642,17 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_add_group_py_(1) - 2016.11.22 at 22h 42m 00s.xml">
+    <history-entry file="py_test_in_test_add_group_py_(1) - 2016.11.23 at 16h 44m 49s.xml">
       <configuration name="py.test in test_add_group.py (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_add_group_py_(1) - 2016.11.22 at 22h 42m 10s.xml">
+    <history-entry file="py_test_in_test_add_group_py_(1) - 2016.11.23 at 16h 46m 27s.xml">
       <configuration name="py.test in test_add_group.py (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_db_matches_ui_py - 2016.11.22 at 22h 40m 08s.xml">
-      <configuration name="py.test in test_db_matches_ui.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_add_group_py_(1) - 2016.11.23 at 16h 46m 34s.xml">
+      <configuration name="py.test in test_add_group.py (1)" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_db_matches_ui_py - 2016.11.22 at 22h 51m 45s.xml">
-      <configuration name="py.test in test_db_matches_ui.py" configurationId="tests" />
+    <history-entry file="py_test_in_test_add_group_py_(1) - 2016.11.23 at 16h 48m 31s.xml">
+      <configuration name="py.test in test_add_group.py (1)" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_db_matches_ui_py - 2016.11.22 at 22h 54m 42s.xml">
       <configuration name="py.test in test_db_matches_ui.py" configurationId="tests" />
@@ -665,12 +677,12 @@
     <frame x="-8" y="0" width="1924" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17418678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1740042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5020877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4983678" sideWeight="0.49791232" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49788582" sideWeight="0.49791232" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -697,13 +709,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/test_add_group.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
@@ -857,7 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/groups.json" />
     <entry file="file://$PROJECT_DIR$/data/contacts.json" />
     <entry file="file://$PROJECT_DIR$/data/test1.json" />
     <entry file="file://$PROJECT_DIR$/data/test.json" />
@@ -898,14 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -938,7 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="123" column="43" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,13 +948,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/mysql/connector/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/groups.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -978,8 +977,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fixture/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="29" column="112" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="112" />
+        <state relative-caret-position="629">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
@@ -988,8 +987,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_db_matches_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+        <state relative-caret-position="119">
+          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
