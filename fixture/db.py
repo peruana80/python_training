@@ -30,8 +30,8 @@ class DbFixture():
         try:
             cursor.execute("select id, firstname, lastname from addressbook")
             for row in cursor:
-                (id, firstname, lastname) = row
-                list.append(Contact(id=str(id), firstname=firstname, lastname=lastname))
+                (id, first_name, last_name) = row
+                list.append(Contact(id=str(id), first_name=first_name, last_name=last_name))
         finally:
             cursor.close()
         return list
