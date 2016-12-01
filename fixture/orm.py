@@ -17,6 +17,7 @@ class ORMFixture:
         footer = Optional(str, column ='group_footer')
         contacts = Set(lambda: ORMFixture.ORMContact, table="address_in_groups", column="id", reverse="groups",lazy=True)
 
+
     class ORMContact(db.Entity):
         _table_ = 'addressbook'
         id = PrimaryKey(int, column='id')
@@ -34,10 +35,18 @@ class ORMFixture:
         self.db.generate_mapping()
         sql_debug(True)
 
+
     def convert_groups_to_model(self, groups):
         def convert(group):
             return Group(id=str(group.id), name=group.name, header=group.header, footer=group.footer)
         return list(map(convert, groups))
+
+
+    def convert_contacts_to_model(self, contacts):
+        def convert(contact):
+            return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name)
+
+        return list(map(convert, contacts))
 
 
     @db_session
@@ -45,14 +54,12 @@ class ORMFixture:
         return self.convert_groups_to_model(select(g for g in ORMFixture.ORMGroup))
 
 
-    def convert_contacts_to_model(self, contacts):
-        def convert(contact):
-            return Contact(id=str(contact.id), first_name=contact.first_name, last_name=contact.last_name)
-        return list(map(convert, contacts))
+
 
     @db_session
     def get_contact_list(self):
         return self.convert_contacts_to_model(select(c for c in ORMFixture.ORMContact if c.deprecated is None))
+
 
     @db_session
     def get_contacts_in_group(self, group):
