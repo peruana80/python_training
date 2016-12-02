@@ -1,29 +1,25 @@
 import re
-from random import randrange
+from model.contact import Contact
 
-def test_contact_on_the_home_page(app):
-    old_contacts = app.contact.get_contact_list()
-    index = randrange(len(old_contacts))
-    contact_from_home_page = app.contact.get_contact_list()[index]
-    contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
 
-    assert contact_from_home_page.first_name == contact_from_edit_page.first_name
-    assert contact_from_home_page.last_name == contact_from_edit_page.last_name
-    assert contact_from_home_page.address == contact_from_edit_page.address
-    assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)
-    assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
+def test_contacts_on_home_page(app,db):
+    home_page_contacts,db_contacts = sorted(app.contact.get_contact_list(),key=Contact.id_or_max),sorted(db.get_contact_list(),key=Contact.id_or_max)
+    assert len(home_page_contacts)==len(db_contacts)
+    for index in range(0,len(db_contacts)):
+        assert db_contacts[index].first_name == home_page_contacts[index].first_name
+        assert db_contacts[index].last_name == home_page_contacts[index].last_name
+        assert db_contacts[index].address == home_page_contacts[index].address
+        assert merge_emails_like_on_home_page([db_contacts[index].email, db_contacts[index].email2, db_contacts[index].email3]) == home_page_contacts[index].all_emails_from_home_page
+        assert merge_phones_like_on_home_page([db_contacts[index].home_number, db_contacts[index].mobile_number,
+                                               db_contacts[index].work_number, db_contacts[index].phone2])== home_page_contacts[index].all_phones_from_home_page
 
-def clear(s):
-    return re.sub("[() -]", "", s)
 
-def merge_emails_like_on_home_page(contact):
+def merge_emails_like_on_home_page(list):
     return "\n".join(filter(lambda x: x != "",
-                            map(lambda x: clear(x),
-                                filter(lambda x: x is not None,[contact.email, contact.email2, contact.email3]))))
+                            filter(lambda x: x is not None,list)))
 
-def merge_phones_like_on_home_page(contact):
+
+def merge_phones_like_on_home_page(list):
     return "\n".join(filter(lambda x: x != "",
-                            map(lambda x: clear(x),
-                                filter(lambda x: x is not None,
-                                       [contact.home_number, contact.mobile_number, contact.work_number, contact.phone2]))))
-
+                            map(lambda x: re.sub("[ -()]","",x),
+                                filter(lambda x: x is not None,list))))
